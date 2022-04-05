@@ -1,0 +1,410 @@
+/* 
+Here's a good rule of thumb for declaring CSS variables: if you find yourself using the same property and value often in the same CSS file, you should declare a variable for it to avoid repetition and redundancy.
+syntax: :root{
+  --variable name
+}
+
+I will also import the Roboto font from Google, and declare some CSS resets to remove some default features such as margin and padding for elements, text-decoration for anchor tags, and list-style-type for lists.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Variables */
+:root{
+  --foot-family: "Roboto", Tahoma;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.6s;
+  /* --color: green; */
+}
+/* Variable end */
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* CSS resets */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: var(--primary-color);
+}
+a:hover{
+  color: var(--secondary-color);
+}
+body{
+  font-family: var(--foot-family);
+}
+
+nav{
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;/* The z-index property with the value of 1 makes sure the navbar displays over any other element on the web page. That's how you make a sticky navbar.*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+}
+
+/* to make The nav menu items to be side by side, not on top of each other. I will be doing that with Flexbox. */
+
+nav h1{
+  color: var(--primary-color);
+}
+nav a{
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+nav a:hover{
+  color: var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
+}
+nav ul{
+  display: flex;
+  /* gap: 1.9rem; */
+}
+nav ul li{
+  font-weight: var(--bold-font);
+  /* display: flex; */
+  padding: 9px;
+}
+
+/* styling the hamburger menu */
+.burger-menu{
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+/* styling the hero-section */
+.hero-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 68.75rem;
+  margin:  auto;
+}
+.hero-img{
+  height: 23.5rem;
+  width: 26.5rem;
+  margin: 3.785rem;
+  border-radius: 9px;
+  box-shadow: 0px 3px 15px 1px var(--primary-shadow);
+}
+.bio {
+  width: 26rem;
+  padding: 0.630rem;
+  border-radius: 8px;
+  box-shadow: 0px 3px 15px 1px var(--primary-shadow);
+  /* height: 23rem; */
+}
+
+.bio h2 {
+  margin-bottom: var(--bottom-margin);
+  /* text-align: center; */
+}
+
+.bio p {
+  line-height: var(--line-height);
+  padding: 0.3rem 0;
+}
+
+/* more about me section */
+.more-about-me{
+  background-color: var(--bg-color);
+  padding: 1rem 6rem;
+}
+.more-about-me h2{
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+}
+.more-about-me p{
+  line-height: var(--line-height);
+  padding: 0.2rem;
+  /* text-align: center; */
+}
+
+
+/* skills section styling */
+.skills-section{
+  max-width: 68.78rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+.skills-header{
+  margin-bottom: 1rem;
+}
+.skill-wrapper img{
+  padding: 1.25rem;
+}
+.icon{
+  width: 12.875rem;
+  height: 12.25rem;
+}
+.icon-card{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 13px var(--secondary-shadow);
+  padding: 20px;
+  margin: 20px;
+}
+
+/* styling the projects section */
+.project-section{
+  background-color: var(--bg-color);
+  padding: 30px ;
+  margin-top: 2rem;
+}
+.project-pic{
+  width: 65%;
+  height: 65%;
+
+}
+.projects-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.project-details{
+  margin-bottom: var(--bottom-margin);
+}
+.projects-title{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.project-title{
+  margin-bottom: var(--bottom-margin);
+  margin-top: 0.2rem;
+}
+.project-container{
+  text-align: center;
+  width: 22rem;
+  padding: 1rem;
+}
+.project-container p{
+  padding: 0.4rem;
+}
+.project-card{
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+/* styling the contact section */
+.contact-section{
+  margin-top: 2rem;
+}
+.contact-section h2{
+  text-align: center;
+  margin-bottom: var(--bottom-margin);
+}
+.contact-form-wrapper{
+  max-width: 40.75rem;
+  margin: 0 auto;
+  padding: 0.938rem;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  border-radius: 5px;
+
+}
+.contact-form-wrapper label{
+  line-height: 2.7em;
+  font-weight: var(--bold-font);
+  color: var(--primary-color);
+}
+.contact-form-wrapper textarea{
+  min-height: 6.25rem;
+  font-size: 15px;
+}
+.contact-form-wrapper .input-field{
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  border: 2px outset var(--primary-color);
+  font-size: 0.875rem;
+  outline: none;
+}
+.input-field::placeholder{
+  padding: 0.4rem;
+  color: var(--primary-color);
+}
+.submit-btn{
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #fff;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  /* opacity: 0.6; */
+  transition: transform 1s,background-color 1s, opacity 2s;
+}
+.submit-btn:hover{
+  transform: scale(1.0);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  border: 2px solid var(--primary-color);
+
+
+}
+
+/* styling the social icons */
+.socials{
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  right: 1%;
+  bottom: 50%;
+}
+.social-icon{
+  width: 2rem;
+  height: 2rem;
+}
+/* styling the scroll-up btn */
+.scroll-up{
+  position: fixed;
+  right: 0.5%;
+  bottom: 2%;
+  cursor: pointer;
+}
+.up-arrow{
+  width: 3rem;
+  height: 3rem;
+}
+
+/* styling the footer */
+footer{
+  background-color: var(--bg-color);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+/* making the website responsive with media queries and flexbox */
+/* First, we'll need to make the images and text look smaller, and then we'll make the content of each section display in a vertical layout by setting the flex-direction to column.i will use 2 breakpoints 720px for tablets and iphone,420px for small android phone */
+
+@media screen and (max-width: 770px){
+  /* changes reflects on screen with a width of 720px and below */
+  nav{
+    padding: 1.5rem 1rem;
+  }
+  /* on smaller device,the nav items needs to be on top each other and they need to be hidden,so to do that i built a hamburger menu and it will be hidden initially*/
+  nav ul{
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 86px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+  nav ul li{
+    margin: 8px;
+  }
+  /* to unhide the hamburger menu do the below */
+  .burger-menu{
+    display: block;
+  }
+  nav ul.show{
+    transform: translateX(0);
+  }
+
+/* about/hero section */
+.hero-section{
+  margin-top: -5rem;
+  flex-direction: column;
+  gap: 0;
+}
+.hero-img{
+  height: 18.5rem;
+  width: 20rem;
+  margin-top: 6rem;
+}
+.bio{
+  /* margin-top: -7rem; */
+  width: 20.5rem;
+}
+
+/* styling the more about me section */
+.more-about-me{
+  margin-top: 2rem;
+  padding: 1rem 3.5rem;
+}
+.more-about-me h2{
+  text-align: center;
+}
+.more-about-me p{
+  text-align: justify;
+}
+
+/* styling the skills section */
+.icon{
+  width: 5.875rem;
+  height: 5.25rem;
+}
+
+/* styling the projects section */
+.projects-container{
+  flex-direction: column;
+}
+.project-container{
+  width: 20.875rem;
+}
+
+/* styling the contact form */
+.contact-form-wrapper{
+  max-width: 20.75rem;
+}
+
+}
+
+@media screen and (max-width: 420px){
+  /* changes reflects on screen with a width of 420px and below  */
+  .hero-img{
+    height: 10.5rem;
+    width: 14rem;
+  }
+  .bio{
+    width: 15.3rem;
+  }
+  .project-container{
+    width: 15.75rem;
+  }
+  .contact-form-wrapper{
+    max-width: 15.75rem;
+  }
+  .icon{
+    width: 4.1rem;
+
+  }
+  
+}
