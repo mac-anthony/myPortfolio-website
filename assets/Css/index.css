@@ -368,8 +368,8 @@ footer{
 
 /* styling the skills section */
 .icon{
-  width: 5.875rem;
-  height: 5.25rem;
+  width: 8.900rem;
+  height: 7.25rem;
 }
 
 /* styling the projects section */
@@ -387,7 +387,7 @@ footer{
 
 }
 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 450px){
   /* changes reflects on screen with a width of 420px and below  */
   .hero-img{
     height: 10.5rem;
@@ -403,8 +403,15 @@ footer{
     max-width: 15.75rem;
   }
   .icon{
-    width: 4.1rem;
-
+    width: 5.1rem;
+    /* margin: 0.9rem; */
   }
   
+}
+
+@media screen and (max-width: 361px){
+.icon{
+  width: 4.5rem;
+  height: 5rem;
+}
 }
