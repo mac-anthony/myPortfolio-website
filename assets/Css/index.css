@@ -345,7 +345,7 @@ footer{
   gap: 0;
 }
 .hero-img{
-  height: 18.5rem;
+  height: 19.5rem;
   width: 20rem;
   margin-top: 6rem;
 }
@@ -390,11 +390,11 @@ footer{
 @media screen and (max-width: 450px){
   /* changes reflects on screen with a width of 420px and below  */
   .hero-img{
-    height: 10.5rem;
-    width: 14rem;
+    height: 15.5rem;
+    width: 16rem;
   }
   .bio{
-    width: 15.3rem;
+    width: 16.650rem;
   }
   .project-container{
     width: 15.75rem;
@@ -413,5 +413,12 @@ footer{
 .icon{
   width: 4.5rem;
   height: 5rem;
+}
+.bio{
+  width: 13.650rem;
+}
+.hero-img{
+  width: 14rem;
+  height: 15.650rem;
 }
 }
