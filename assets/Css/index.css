@@ -96,7 +96,7 @@ background-color: #F4672D;
 /* styling the hamburger menu */
 .burger-menu{
   /* color: var(--primary-color); */
-  color: #fff;
+  /* color: #fff; */
   font-size: 2rem;
   border: 0;
   background-color: transparent;
