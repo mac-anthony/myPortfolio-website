@@ -10,7 +10,7 @@ This is the [link](https://github.com/mac-anthony/myPortfolio-website) to the Gi
 
 ## Sample Website
 
-A live demo is already available via this [link](https://myportfolio-webdev.herokuapp.com/)
+A live demo is already available via this [link](https://my-porfolioo.netlify.app)
 
 ## Tech Stack
 
