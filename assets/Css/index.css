@@ -14,8 +14,10 @@ I will also import the Roboto font from Google, and declare some CSS resets to r
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
-  --bg-color: #fcfcfc;
-  --primary-color: #4756df;
+  /* --bg-color: #fcfcfc; */
+  --bg-color: #1A1918;
+  /* --primary-color: #4756df; */
+  --primary-color: #F4672D;
   --secondary-color: #ff7235;
   --primary-shadow: #8b8eaf;
   --secondary-shadow: #a17a69;
@@ -45,10 +47,11 @@ a{
   color: var(--primary-color);
 }
 a:hover{
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 body{
   font-family: var(--foot-family);
+  background-color: var(--bg-color);
 }
 
 nav{
@@ -60,36 +63,40 @@ nav{
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 3.5rem;
-  background-color: var(--bg-color);
+  background-color: var(--primary-color);
   box-shadow: 0 3px 5px rgba(0,0,0,0.3);
 }
 
 /* to make The nav menu items to be side by side, not on top of each other. I will be doing that with Flexbox. */
 
 nav h1{
-  color: var(--primary-color);
+  color: #1A1918;
 }
 nav a{
-  color: var(--primary-color);
+  color: #1A1918;
   transition: var(--transition);
 }
 nav a:hover{
-  color: var(--secondary-color);
+  color: #A44323;
   border-bottom: 1px solid var(--secondary-color);
 }
 nav ul{
   display: flex;
   /* gap: 1.9rem; */
+  color: #fff;
+
 }
 nav ul li{
   font-weight: var(--bold-font);
   /* display: flex; */
   padding: 9px;
+background-color: #F4672D;
 }
 
 /* styling the hamburger menu */
 .burger-menu{
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
+  color: #fff;
   font-size: 2rem;
   border: 0;
   background-color: transparent;
@@ -107,8 +114,8 @@ nav ul li{
   margin:  auto;
 }
 .hero-img{
-  height: 23.5rem;
-  width: 26.5rem;
+  height: 22rem;
+  width: 25.5rem;
   margin: 3.785rem;
   border-radius: 9px;
   box-shadow: 0px 3px 15px 1px var(--primary-shadow);
@@ -123,12 +130,14 @@ nav ul li{
 
 .bio h2 {
   margin-bottom: var(--bottom-margin);
+  color: var(--primary-color);
   /* text-align: center; */
 }
 
 .bio p {
   line-height: var(--line-height);
   padding: 0.3rem 0;
+  color: var(--primary-color);
 }
 
 /* more about me section */
@@ -139,10 +148,12 @@ nav ul li{
 .more-about-me h2{
   margin-bottom: var(--bottom-margin);
   text-align: center;
+  color: var(--primary-color);
 }
 .more-about-me p{
   line-height: var(--line-height);
   padding: 0.2rem;
+  color: var(--primary-color);
   /* text-align: center; */
 }
 
@@ -156,6 +167,7 @@ nav ul li{
 }
 .skills-header{
   margin-bottom: 1rem;
+  color: var(--primary-color);
 }
 .skill-wrapper img{
   padding: 1.25rem;
@@ -165,7 +177,7 @@ nav ul li{
   height: 12.25rem;
 }
 .icon-card{
-  background-color: #fff;
+  background-color: var(--bg-color);
   border-radius: 10px;
   box-shadow: 0 3px 13px var(--secondary-shadow);
   padding: 20px;
@@ -195,10 +207,12 @@ nav ul li{
 .projects-title{
   text-align: center;
   margin-bottom: 1rem;
+  color: var(--primary-color);
 }
 .project-title{
   margin-bottom: var(--bottom-margin);
   margin-top: 0.2rem;
+  color: var(--primary-color);
 }
 .project-container{
   text-align: center;
@@ -207,13 +221,17 @@ nav ul li{
 }
 .project-container p{
   padding: 0.4rem;
+  color: var(--primary-color);
 }
 .project-card{
-  background-color: #fff;
+  background-color: var(--bg-color);
   border-radius: 11px;
   box-shadow: 0 3px 10px var(--primary-shadow);
   padding: 20px;
   margin: 10px;
+}
+.project-link:hover{
+  color: #A44323;
 }
 
 /* styling the contact section */
@@ -223,6 +241,7 @@ nav ul li{
 .contact-section h2{
   text-align: center;
   margin-bottom: var(--bottom-margin);
+  color: var(--primary-color);
 }
 .contact-form-wrapper{
   max-width: 40.75rem;
@@ -286,6 +305,9 @@ nav ul li{
 .social-icon{
   width: 2rem;
   height: 2rem;
+  /* border-radius: 10px; */
+  border-radius: 100%;
+
 }
 /* styling the scroll-up btn */
 .scroll-up{
@@ -295,23 +317,30 @@ nav ul li{
   cursor: pointer;
 }
 .up-arrow{
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
 }
 
 /* styling the footer */
 footer{
-  background-color: var(--bg-color);
+  background-color: var(--primary-color);
   padding: 1.25rem;
   text-align: center;
   margin: 2rem 0 0;
+}
+footer p a{
+  color: #1A1918;
+}
+footer p a:hover{
+  color: #A44323;
 }
 
 /* making the website responsive with media queries and flexbox */
 /* First, we'll need to make the images and text look smaller, and then we'll make the content of each section display in a vertical layout by setting the flex-direction to column.i will use 2 breakpoints 720px for tablets and iphone,420px for small android phone */
 
 @media screen and (max-width: 770px){
-  /* changes reflects on screen with a width of 720px and below */
+  /* changes reflects on screen with a width of 770px and below */
   nav{
     padding: 1.5rem 1rem;
   }
@@ -420,5 +449,12 @@ footer{
 .hero-img{
   width: 14rem;
   height: 15.650rem;
+}
+.icon-card{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 14px var(--secondary-shadow);
+  padding: 20px;
+  margin: 20px;
 }
 }
