@@ -226,6 +226,9 @@ nav ul li{
   padding: 0.4rem;
   color: var(--primary-color);
 }
+.project-container a{
+  border-bottom: 2px solid #5E5D5F;
+}
 .project-card{
   background-color: var(--bg-color);
   border-radius: 11px;
@@ -234,7 +237,7 @@ nav ul li{
   margin: 10px;
 }
 .project-link:hover{
-  color: #A44323;
+  color: #5E5D5F;
 }
 
 /* styling the contact section */
