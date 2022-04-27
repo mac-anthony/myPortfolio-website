@@ -19,9 +19,9 @@ I will also import the Roboto font from Google, and declare some CSS resets to r
   --primary-color: #C8C6C6;
   /* --primary-color: #8F8887; */
   --secondary-color: #ff7235;
-  /* --primary-shadow: #8b8eaf;
- */
- --primary-shadow: #C8C6C6;
+   --primary-shadow: #8b8eaf;
+ 
+ /* --primary-shadow: #C8C6C6; */
   --secondary-shadow: #7e7e7e;
   --bottom-margin: 0.5rem;
   --bottom-margin-2: 1rem;
