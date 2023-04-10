@@ -203,6 +203,7 @@ nav ul li{
   align-items: center;
   justify-content: center;
   margin: 1rem auto;
+  height: auto;
 }
 .project-details{
   margin-bottom: var(--bottom-margin);
